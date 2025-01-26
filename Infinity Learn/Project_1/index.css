@@ -1,0 +1,76 @@
+/* General body styling */
+body {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #000000, #0051ff); /* Blue to Orange gradient */
+  }
+  
+  /* Form container styling */
+  .form-container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Input styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    border-color: #ff7f00; /* Orange focus border */
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #3498db; /* Blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ff7f00; /* Orange hover effect */
+  }
+  
+  button:active {
+    background-color: #e67e22; /* Darker orange when clicked */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 480px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    input,
+    button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
