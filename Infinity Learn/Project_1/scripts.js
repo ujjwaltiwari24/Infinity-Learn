@@ -1,6 +1,10 @@
 // Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { 
+  getAuth, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword 
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -19,17 +23,37 @@ const auth = getAuth(app);
 
 // Login form handler
 const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-loginForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        window.location.href = "home.html"; // Redirect to the home page after successful login
+      })
+      .catch((error) => {
+        alert("Login failed: " + error.message);
+      });
+  });
+}
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      window.location.href = "home.html"; // Redirect to the home page after successful login
-    })
-    .catch((error) => {
-      alert("Login failed: " + error.message);
-    });
-});
+// Register form handler
+const registerForm = document.getElementById("registerForm");
+if (registerForm) {
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("registerEmail").value;
+    const password = document.getElementById("registerPassword").value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("Registration successful!");
+        window.location.href = "home.html"; // Redirect to the home page after successful registration
+      })
+      .catch((error) => {
+        alert("Registration failed: " + error.message);
+      });
+  });
+}
