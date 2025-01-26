@@ -1,46 +1,51 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
-   background-image: url("home_background.jpg");
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("home_background.jpg");
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    color: #333; 
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header styling */
 header {
-    background-color: #007bff; /* Blue */
+    background-color: #0056b3; /* Deep Blue */
     color: #fff;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 /* User name styling */
 #user-name {
     font-size: 18px;
-    margin-top: 10px;
     font-weight: 400;
     color: #ddd;
+    margin-top: 10px;
 }
 
 /* Logout button styling */
 #logout-btn {
-    background-color: #ff5722; /* Orange */
+    background-color: #ff6600; /* Bright Orange */
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px;
     border: none;
     cursor: pointer;
     border-radius: 30px;
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 18px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
 }
 
 #logout-btn:hover {
-    background-color: #e64a19; /* Darker orange */
+    background-color: #e65c00; /* Darker Orange */
     transform: scale(1.05);
 }
 
@@ -48,80 +53,82 @@ header {
 .features {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 40px auto;
+    gap: 40px;
+    margin: 50px auto;
     flex-wrap: wrap;
     max-width: 1200px;
 }
 
 /* Individual feature box */
 .feature-box {
-    background-color: #9bff82; /* Soft yellow */
-    padding: 25px 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffd700; /* Soft Yellow */
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 30%;
-    min-height: 120px;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .feature-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .feature-box h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 15px;
     color: #333;
+    font-weight: 600;
 }
 
 .feature-box p {
-    font-size: 14px;
-    color: #666;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 1024px) {
     header {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .feature-box {
         width: 45%;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     #logout-btn {
         width: 100%;
-        padding: 15px;
+        padding: 16px;
         font-size: 18px;
     }
 }
 
 @media (max-width: 768px) {
     header {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .features {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
     }
 
     .feature-box {
-        width: 80%;
+        width: 75%;
     }
 
     #logout-btn {
         width: 100%;
-        padding: 15px;
+        padding: 18px;
         font-size: 18px;
     }
 }
@@ -137,7 +144,7 @@ header {
 
     #logout-btn {
         width: 100%;
-        padding: 18px;
+        padding: 20px;
         font-size: 20px;
     }
 }
