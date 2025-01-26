@@ -14,20 +14,20 @@ body {
 header {
     background-color: #0056b3; /* Deep Blue */
     color: #fff;
-    padding: 25px 0;
+    padding: 2px 0;
     text-align: center;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 500;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
 }
 
 /* User name styling */
 #user-name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #ddd;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 /* Logout button styling */
@@ -53,21 +53,21 @@ header {
 .features {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin: 50px auto;
+    gap: 30px;
+    margin: 30px auto;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 50%;
 }
 
 /* Individual feature box */
 .feature-box {
     background-color: #ffd700; /* Soft Yellow */
-    padding: 30px 20px;
-    border-radius: 20px;
+    padding: 20px 20px;
+    border-radius: 25%;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 30%;
-    min-height: 150px;
+    width: 20%;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,15 +81,15 @@ header {
 }
 
 .feature-box h3 {
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 15px;
     color: #333;
     font-weight: 600;
 }
 
 .feature-box p {
-    font-size: 15px;
-    color: #555;
+    font-size: 18px;
+    color: #6a0000;
     line-height: 1.5;
 }
 
